@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="评论与回复测试" />
+
+        <Button
+            android:id="@+id/uploadphotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上传照片测试" />
+
+        <Button
+            android:id="@+id/gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS定位" />
+
+        <Button
+            android:id="@+id/smsdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试短信DATA" />
+        
+        <Button
+            android:id="@+id/maptest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地图导航测试" />
+        
+    </LinearLayout>
+
+</ScrollView>

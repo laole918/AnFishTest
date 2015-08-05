@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/keyBoardBlank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="64dp" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/keyBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="#f8f8f8"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/comment_box"
+            android:ems="10"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="15sp" >
+        </EditText>
+
+        <FrameLayout
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="#2a96f0"
+                android:textSize="15sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

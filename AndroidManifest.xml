@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lele.test"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.lele.test.MainApplication" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="3c88b120a2aedc2a9abc3af466082280" />
+        <activity
+            android:name="com.lele.test.MainActivity_"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".SmsReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DATA_SMS_RECEIVED" />
+
+                <data android:scheme="sms" />
+                <data android:host="localhost" />
+                <data android:port="1000" />
+            </intent-filter>
+        </receiver>
+        
+        <activity
+            android:name="com.photoselector.ui.PhotoSelectorActivity"
+            android:label="图片选择" >
+        </activity>
+        <activity
+            android:name="com.photoselector.ui.PhotoPreviewActivity"
+            android:label="图片预览" >
+        </activity>
+
+        <activity android:name="com.lele.test.CommentsActivity" >
+        </activity>
+        <activity android:name="com.lele.test.GpsActivity" >
+        </activity>
+        <activity android:name="com.lele.test.SmsTestActivity" >
+        </activity>
+        <activity android:name="com.lele.test.MapNavActivity_" >
+        </activity>
+        <activity android:name="com.lele.test.UploadPhotos_" >
+        </activity>
+    </application>
+
+</manifest>
